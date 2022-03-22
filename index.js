@@ -1,7 +1,7 @@
-var i = 0;
-var txt =
-  "Full-stack software developer and architect, in love with everything related to programming, leadership and innovation. I am also a doctor.";
-var speed = 30;
+let i = 0;
+let txt =
+  "Full-stack software engineer, in love with everything related to programming, leadership and innovation.";
+let speed = 30;
 
 function typeWriter() {
   if (i < txt.length) {
