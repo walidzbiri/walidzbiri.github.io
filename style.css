@@ -1,0 +1,268 @@
+@font-face {
+  font-family: Consolas;
+  src: url(CONSOLA.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Consolas;
+}
+
+body {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 0 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  max-width: 800px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 5px;
+}
+
+#logo #logo-part1 {
+  flex-basis: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-size: 48px;
+  color: red;
+}
+
+#logo #logo-part2 {
+  flex-basis: 120px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-size: 16px;
+  line-height: 0.8;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#hero div {
+  flex: 1;
+}
+
+#hero div h1 {
+  font-size: 56px;
+}
+
+#hero div h2 {
+  margin-top: 20px;
+}
+
+#hero div p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#hero > p {
+  flex: 1;
+  min-width: 300px;
+  background-image: url("python.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#buttons a {
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid white;
+  margin-right: 20px;
+}
+
+#buttons a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+/* Resume */
+
+#tab-links {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#tab-links a {
+  margin-right: 20px;
+}
+
+.active {
+  color: red;
+}
+
+.active:before {
+  content: "🡆 ";
+}
+
+#experience {
+  flex: 1;
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project {
+  width: 100%;
+  padding: 20px;
+  border: 2px dotted white;
+  margin: 20px 0;
+}
+
+.project p {
+  padding: 10px 0;
+}
+
+.project ul {
+  padding: 10px 30px;
+}
+
+#skills {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+#skills > div {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+}
+
+.skill-box {
+  flex: 1;
+  padding: 20px;
+  border: 2px dotted white;
+}
+
+.skill-box ul {
+  padding: 10px 30px;
+}
+
+.skill-box li {
+  padding: 10px 0px;
+}
+
+/* Contact Me */
+
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact-info a i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+#contact-info p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+#contact-form-status {
+  color: red;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: black;
+}
+
+input[type="submit"]:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+/* Footer */
+
+footer {
+  height: 20px;
+  width: 100%;
+  background-color: red;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 700px) {
+  #hero > p {
+    display: none;
+  }
+}
